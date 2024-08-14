@@ -11,6 +11,7 @@ class ErrorHandler extends \craft\web\ErrorHandler
 	 */
 	protected function renderException($exception): void
 	{
+		$this->errorAction = 'templates/render-error';
 		$this->exceptionView = __DIR__.'/view/views/errorPage.php';
 		parent::renderException($exception);
 	}
